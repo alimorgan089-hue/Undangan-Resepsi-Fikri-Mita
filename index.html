@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8d6f49">
+<meta name="description" content="Undangan Pernikahan Fikriya Ali & Amita Rahma - 28 Oktober 2026">
+<title>Fikriya Ali & Amita Rahma | Wedding Invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+:root{--bg:#f8f2e9;--paper:#fffaf3;--gold:#8d6f49;--gold2:#b59a72;--ink:#4b3c2d;--line:#dfd0bb}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.7}
+h1,h2,h3,.script{font-family:"Cormorant Garamond",Georgia,serif}
+.container{width:min(1100px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,250,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{font:600 27px "Cormorant Garamond",serif;color:var(--gold)}
+.links{display:flex;gap:22px;font-size:12px}
+.links a{color:var(--ink);text-decoration:none}
+.music{border:1px solid var(--gold2);background:transparent;border-radius:30px;padding:7px 13px;color:var(--gold);cursor:pointer}
+.hero{min-height:100vh;padding:125px 20px 80px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 20%,#fffdf9,transparent 32%),radial-gradient(circle at 80% 70%,#efe1cd,transparent 35%)}
+.hero:before,.hero:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #d9c4a5;border-radius:50%;opacity:.45}
+.hero:before{left:-110px;top:160px}.hero:after{right:-120px;bottom:100px}
+.kicker{letter-spacing:5px;font-size:12px;color:var(--gold)}
+.hero h1{font-size:clamp(56px,10vw,105px);line-height:.85;margin:25px 0 15px;font-weight:500}
+.amp{font-size:.55em;color:var(--gold2)}
+.date{font-family:"Cormorant Garamond",serif;font-size:22px}
+.divider{display:flex;align-items:center;justify-content:center;gap:15px;margin:25px 0;color:var(--gold)}
+.divider:before,.divider:after{content:"";height:1px;width:70px;background:var(--line)}
+.btn{display:inline-block;background:var(--gold);color:#fff;text-decoration:none;padding:13px 24px;border-radius:30px;font-size:13px;border:0;cursor:pointer}
+section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:45px;margin:5px 0;font-weight:500}
+.section-title p{margin:0;color:#766452;font-size:13px}
+.card{background:rgba(255,250,243,.75);border:1px solid var(--line);border-radius:18px;padding:28px}
+.couple{display:grid;grid-template-columns:1fr 100px 1fr;gap:25px;align-items:center;text-align:center}
+.couple h3{font-size:42px;font-weight:500;margin:5px 0}
+.couple .role{font-size:12px;color:#806f5b}
+.orb{width:78px;height:78px;border:1px solid var(--gold2);border-radius:50%;display:grid;place-items:center;margin:auto;font:32px "Cormorant Garamond",serif;color:var(--gold)}
+.events{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.event{text-align:center}
+.icon{font-size:28px;color:var(--gold)}
+.event h3{font-size:30px;margin:5px 0}
+.event strong{color:var(--gold)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0}
+.time{background:#efe4d4;border-radius:14px;padding:18px 8px;text-align:center}
+.time b{display:block;font:600 32px "Cormorant Garamond",serif}
+.time span{font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.mapbox{text-align:center}
+.maplink{display:inline-block;margin-top:20px}
+.rsvp{max-width:650px;margin:auto}
+label{display:block;font-size:12px;margin:15px 0 6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#fffdf9;color:var(--ink);font:inherit}
+textarea{min-height:110px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery .ph{aspect-ratio:1/1;background:linear-gradient(145deg,#eee1cf,#fbf7f0);border:1px solid var(--line);border-radius:14px;display:grid;place-items:center;color:#b39a78;font-size:12px}
+.gift{max-width:650px;margin:auto;text-align:center}
+.bank{display:flex;justify-content:space-between;align-items:center;padding:16px;border-top:1px solid var(--line)}
+.bank:first-of-type{border-top:0}
+footer{text-align:center;padding:60px 20px;background:#eadcc9}
+footer h2{font-size:45px;margin:0}
+.small{font-size:12px;color:#786957}
+.flower{font-size:30px;color:var(--gold2);margin:15px}
+@media(max-width:760px){
+ .links{display:none}.navin{height:58px}.brand{font-size:25px}
+ section{padding:65px 0}.hero{padding-top:100px}
+ .hero h1{font-size:65px}.couple{grid-template-columns:1fr;gap:10px}.orb{width:55px;height:55px;font-size:25px}
+ .events,.grid2{grid-template-columns:1fr}.countdown{gap:7px}.time{padding:13px 4px}.time b{font-size:26px}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <div class="brand">Fikriya & Amita</div>
+    <div class="links">
+      <a href="#home">Home</a><a href="#mempelai">Mempelai</a><a href="#acara">Acara</a>
+      <a href="#lokasi">Lokasi</a><a href="#rsvp">RSVP</a><a href="#gift">Amplop</a>
+    </div>
+    <button class="music" onclick="toggleMusic()">♪ Musik</button>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="kicker">THE WEDDING OF</div>
+    <h1>Fikriya Ali<br><span class="amp">&amp;</span><br>Amita Rahma</h1>
+    <div class="date">Rabu, 28 Oktober 2026</div>
+    <div class="divider">❦</div>
+    <p>Dengan memohon rahmat dan ridha Allah SWT,<br>kami bermaksud menyelenggarakan pernikahan putra-putri kami.</p>
+    <a class="btn" href="#mempelai">Buka Undangan ↓</a>
+  </div>
+</section>
+
+<section id="mempelai">
+ <div class="container">
+  <div class="section-title"><p>DENGAN PENUH CINTA</p><h2>Mempelai</h2></div>
+  <div class="card couple">
+   <div><div class="icon">❧</div><h3>Fikriya Ali</h3><div class="role">Putra dari<br><b>Bapak Ulil Amri</b> &amp; <b>Ibu Andriwati</b></div></div>
+   <div class="orb">&amp;</div>
+   <div><div class="icon">❧</div><h3>Amita Rahma</h3><div class="role">Putri dari<br><b>Alm. Bapak Hariyanto</b> &amp; <b>Ibu Sriwiyani</b></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="acara">
+ <div class="container">
+  <div class="section-title"><p>CATAT TANGGALNYA</p><h2>Waktu &amp; Acara</h2></div>
+  <div class="events">
+   <div class="card event"><div class="icon">◌</div><h3>Akad Nikah</h3><p><strong>Rabu, 28 Oktober 2026</strong><br>09.00 WIB</p></div>
+   <div class="card event"><div class="icon">♡</div><h3>Resepsi</h3><p><strong>Rabu, 28 Oktober 2026</strong><br>16.00 WIB – Selesai</p></div>
+  </div>
+  <div class="section-title" style="margin-top:55px"><p>MENUJU HARI BAHAGIA</p><h2>Countdown</h2></div>
+  <div class="countdown">
+   <div class="time"><b id="days">0</b><span>Hari</span></div><div class="time"><b id="hours">0</b><span>Jam</span></div>
+   <div class="time"><b id="mins">0</b><span>Menit</span></div><div class="time"><b id="secs">0</b><span>Detik</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="lokasi">
+ <div class="container">
+  <div class="section-title"><p>ALAMAT ACARA</p><h2>Lokasi</h2></div>
+  <div class="card mapbox">
+   <div class="icon">⌖</div><h3 class="script" style="font-size:32px">Kp Kr Malang Pokaan</h3>
+   <p>Silakan gunakan tombol di bawah untuk membuka lokasi di Google Maps.</p>
+   <a class="btn maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/sZ3AgJxDKsnUf6PQ8">⌖ Buka di Google Maps</a>
+  </div>
+ </div>
+</section>
+
+<section id="rsvp">
+ <div class="container">
+  <div class="section-title"><p>KEHADIRAN</p><h2>Konfirmasi RSVP</h2></div>
+  <div class="card rsvp">
+   <form onsubmit="sendRSVP(event)">
+    <label>Nama Lengkap</label><input id="nama" required placeholder="Nama Anda">
+    <label>Jumlah Tamu</label><select id="jumlah"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+    <label>Kehadiran</label><select id="hadir"><option>Hadir</option><option>Tidak hadir</option><option>Masih ragu</option></select>
+    <label>Ucapan &amp; Doa</label><textarea id="ucapan" placeholder="Tuliskan ucapan untuk kedua mempelai..."></textarea>
+    <br><br><button class="btn" type="submit">Kirim Konfirmasi</button>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="section-title"><p>MOMEN YANG AKAN DIKENANG</p><h2>Galeri</h2></div>
+  <div class="gallery">
+   <div class="ph">Foto 1</div><div class="ph">Foto 2</div><div class="ph">Foto 3</div>
+   <div class="ph">Foto 4</div><div class="ph">Foto 5</div><div class="ph">Foto 6</div>
+  </div>
+  <p class="small" style="text-align:center;margin-top:15px">Foto dapat ditambahkan nanti pada bagian galeri.</p>
+ </div>
+</section>
+
+<section id="gift">
+ <div class="container">
+  <div class="section-title"><p>TANDA KASIH</p><h2>Amplop Digital</h2></div>
+  <div class="card gift">
+   <p>Bagi keluarga dan sahabat yang ingin memberikan tanda kasih, dapat menggunakan rekening atau e-wallet berikut.</p>
+   <div class="bank"><b>Rekening / E-Wallet</b><span>Data dapat ditambahkan</span></div>
+   <p class="small">Nomor rekening belum dicantumkan karena belum diberikan.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="flower">❦</div>
+ <h2>Terima Kasih</h2>
+ <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+ <div class="divider">❦</div>
+ <div class="script" style="font-size:32px">Fikriya Ali &amp; Amita Rahma</div>
+ <p class="small">© 2026 Fikriya &amp; Amita</p>
+</footer>
+
+<audio id="audio" loop preload="metadata">
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const target = new Date("2026-10-28T09:00:00+07:00").getTime();
+function countdown(){
+ const now=Date.now(), d=Math.max(0,target-now);
+ document.getElementById("days").textContent=Math.floor(d/86400000);
+ document.getElementById("hours").textContent=Math.floor(d%86400000/3600000);
+ document.getElementById("mins").textContent=Math.floor(d%3600000/60000);
+ document.getElementById("secs").textContent=Math.floor(d%60000/1000);
+}
+countdown();setInterval(countdown,1000);
+
+function toggleMusic(){
+ const a=document.getElementById("audio");
+ const btn=document.querySelector(".music");
+ if(a.paused){
+   a.play().then(()=>{btn.textContent="❚❚ Musik";}).catch(()=>{alert("Ketuk tombol Musik sekali lagi untuk memulai musik.");});
+ }else{
+   a.pause();
+   btn.textContent="♪ Musik";
+ }
+}
+function sendRSVP(e){
+ e.preventDefault();
+ const nama=document.getElementById("nama").value;
+ const jumlah=document.getElementById("jumlah").value;
+ const hadir=document.getElementById("hadir").value;
+ const ucapan=document.getElementById("ucapan").value;
+ const text=`Halo Fikriya & Amita, saya ${nama}.%0A%0AKehadiran: ${hadir}%0AJumlah tamu: ${jumlah}%0AUcapan: ${ucapan}`;
+ window.open("https://wa.me/?text="+text,"_blank");
+}
+</script>
+</body>
+</html>
