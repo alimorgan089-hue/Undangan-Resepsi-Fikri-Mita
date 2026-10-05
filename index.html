@@ -55,13 +55,13 @@ input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);
 textarea{min-height:110px;resize:vertical}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.gallery .ph{aspect-ratio:1/1;background:linear-gradient(145deg,#eee1cf,#fbf7f0);border:1px solid var(--line);border-radius:14px;display:grid;place-items:center;color:#b39a78;font-size:12px}
+.gallery .ph{aspect-ratio:1/1;background:linear-gradient(145deg,#eee1cf,#fbf7f0);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:block}.gallery img{width:100%;height:100%;object-fit:cover;display:block}
 .gift{max-width:650px;margin:auto;text-align:center}
 .bank{display:flex;justify-content:space-between;align-items:center;padding:16px;border-top:1px solid var(--line)}
-.bank:first-of-type{border-top:0}
+.bank:first-of-type{border-top:0}.copybtn{background:transparent;border:1px solid var(--gold2);color:var(--gold);border-radius:20px;padding:7px 12px;font-size:11px;cursor:pointer}.gift-note{margin-top:10px}
 footer{text-align:center;padding:60px 20px;background:#eadcc9}
 footer h2{font-size:45px;margin:0}
-.small{font-size:12px;color:#786957}
+.small{font-size:12px;color:#786957}.rsvp-note{background:#f2e7d8;border-radius:12px;padding:12px 14px;font-size:12px;margin-bottom:18px}
 .flower{font-size:30px;color:var(--gold2);margin:15px}
 @media(max-width:760px){
  .links{display:none}.navin{height:58px}.brand{font-size:25px}
@@ -79,7 +79,7 @@ footer h2{font-size:45px;margin:0}
     <div class="brand">Fikriya & Amita</div>
     <div class="links">
       <a href="#home">Home</a><a href="#mempelai">Mempelai</a><a href="#acara">Acara</a>
-      <a href="#lokasi">Lokasi</a><a href="#rsvp">RSVP</a><a href="#gift">Amplop</a>
+      <a href="#lokasi">Lokasi</a><a href="#rsvp">RSVP</a><a href="#gallery">Galeri</a><a href="#gift">Amplop</a>
     </div>
     <button class="music" onclick="toggleMusic()">♪ Musik</button>
   </div>
@@ -138,25 +138,28 @@ footer h2{font-size:45px;margin:0}
  <div class="container">
   <div class="section-title"><p>KEHADIRAN</p><h2>Konfirmasi RSVP</h2></div>
   <div class="card rsvp">
+   <div class="rsvp-note">Setelah menekan <b>Kirim Konfirmasi</b>, data RSVP akan langsung dikirim ke WhatsApp Amita Rahma.</div>
    <form onsubmit="sendRSVP(event)">
     <label>Nama Lengkap</label><input id="nama" required placeholder="Nama Anda">
     <label>Jumlah Tamu</label><select id="jumlah"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
     <label>Kehadiran</label><select id="hadir"><option>Hadir</option><option>Tidak hadir</option><option>Masih ragu</option></select>
     <label>Ucapan &amp; Doa</label><textarea id="ucapan" placeholder="Tuliskan ucapan untuk kedua mempelai..."></textarea>
-    <br><br><button class="btn" type="submit">Kirim Konfirmasi</button>
+    <br><br><button class="btn" type="submit">Kirim Konfirmasi WhatsApp</button>
    </form>
   </div>
  </div>
 </section>
 
-<section>
+<section id="gallery">
  <div class="container">
   <div class="section-title"><p>MOMEN YANG AKAN DIKENANG</p><h2>Galeri</h2></div>
   <div class="gallery">
-   <div class="ph">Foto 1</div><div class="ph">Foto 2</div><div class="ph">Foto 3</div>
-   <div class="ph">Foto 4</div><div class="ph">Foto 5</div><div class="ph">Foto 6</div>
+   <div class="ph"><img src="images/foto-1.jpg" alt="Foto Fikriya dan Amita 1" loading="lazy"></div>
+   <div class="ph"><img src="images/foto-2.jpg" alt="Foto Fikriya dan Amita 2" loading="lazy"></div>
+   <div class="ph"><img src="images/foto-3.jpg" alt="Foto Fikriya dan Amita 3" loading="lazy"></div>
+   <div class="ph"><img src="images/foto-4.jpg" alt="Foto Fikriya dan Amita 4" loading="lazy"></div>
+   <div class="ph"><img src="images/foto-5.jpg" alt="Foto Fikriya dan Amita 5" loading="lazy"></div>
   </div>
-  <p class="small" style="text-align:center;margin-top:15px">Foto dapat ditambahkan nanti pada bagian galeri.</p>
  </div>
 </section>
 
@@ -164,9 +167,12 @@ footer h2{font-size:45px;margin:0}
  <div class="container">
   <div class="section-title"><p>TANDA KASIH</p><h2>Amplop Digital</h2></div>
   <div class="card gift">
-   <p>Bagi keluarga dan sahabat yang ingin memberikan tanda kasih, dapat menggunakan rekening atau e-wallet berikut.</p>
-   <div class="bank"><b>Rekening / E-Wallet</b><span>Data dapat ditambahkan</span></div>
-   <p class="small">Nomor rekening belum dicantumkan karena belum diberikan.</p>
+   <p>Bagi keluarga dan sahabat yang ingin memberikan tanda kasih, dapat menggunakan DANA berikut.</p>
+   <div class="bank">
+    <div><b>DANA</b><br><span>Amita Rahma</span><br><span>085730213117</span></div>
+    <button class="copybtn" type="button" onclick="copyDana()">Salin Nomor</button>
+   </div>
+   <p id="copyStatus" class="small gift-note">Nomor DANA: 085730213117</p>
   </div>
  </div>
 </section>
@@ -181,9 +187,7 @@ footer h2{font-size:45px;margin:0}
  <p class="small">© 2026 Fikriya &amp; Amita</p>
 </footer>
 
-<audio id="audio" loop preload="metadata">
-  <source src="musik.mp3" type="audio/mpeg">
-</audio>
+<audio id="audio" loop preload="metadata"><source src="musik.mp3" type="audio/mpeg"></audio>
 
 <script>
 const target = new Date("2026-10-28T09:00:00+07:00").getTime();
@@ -198,22 +202,26 @@ countdown();setInterval(countdown,1000);
 
 function toggleMusic(){
  const a=document.getElementById("audio");
- const btn=document.querySelector(".music");
- if(a.paused){
-   a.play().then(()=>{btn.textContent="❚❚ Musik";}).catch(()=>{alert("Ketuk tombol Musik sekali lagi untuk memulai musik.");});
- }else{
-   a.pause();
-   btn.textContent="♪ Musik";
- }
+ if(!a.src){return;}
+ a.paused?a.play():a.pause();
 }
 function sendRSVP(e){
  e.preventDefault();
- const nama=document.getElementById("nama").value;
+ const nama=document.getElementById("nama").value.trim();
  const jumlah=document.getElementById("jumlah").value;
  const hadir=document.getElementById("hadir").value;
- const ucapan=document.getElementById("ucapan").value;
- const text=`Halo Fikriya & Amita, saya ${nama}.%0A%0AKehadiran: ${hadir}%0AJumlah tamu: ${jumlah}%0AUcapan: ${ucapan}`;
- window.open("https://wa.me/?text="+text,"_blank");
+ const ucapan=document.getElementById("ucapan").value.trim();
+ const text=`Halo Fikriya & Amita, saya ${nama}.\n\nKehadiran: ${hadir}\nJumlah tamu: ${jumlah}\nUcapan: ${ucapan || "-"}`;
+ const url="https://wa.me/6285730213117?text="+encodeURIComponent(text);
+ window.open(url,"_blank");
+}
+function copyDana(){
+ navigator.clipboard.writeText("085730213117").then(()=>{
+   document.getElementById("copyStatus").textContent="Nomor DANA berhasil disalin.";
+   setTimeout(()=>document.getElementById("copyStatus").textContent="Nomor DANA: 085730213117",2500);
+ }).catch(()=>{
+   alert("Nomor DANA: 085730213117");
+ });
 }
 </script>
 </body>
